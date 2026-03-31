@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+  />
+  <title>정진섭 ♥ 정찬혜 결혼합니다</title>
+
+  <!-- OG 태그 (카카오톡·문자 미리보기) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="정진섭 ♥ 정찬혜 결혼합니다" />
+  <meta property="og:description" content="2026년 8월 8일 토요일 오전 11시 · 팔레드오페라 트리아농홀" />
+  <meta property="og:image" content="./images/hero.png" />
+  <meta property="og:locale" content="ko_KR" />
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --surface: #ffffff;
+      --text: #2c2c2c;
+      --muted: #6b6b6b;
+      --line: #e2e8f4;
+      /* 코발트 블루 — 포인트 컬러 통일 */
+      --accent: #0047ab;
+      --accent-light: #3d73c4;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      touch-action: manipulation;
+    }
+
+    /* 사진 핀치·길게 눌러 확대/미리보기 완화 */
+    .app img {
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .app {
+      max-width: 480px;
+      margin: 0 auto;
+      min-height: 100dvh;
+      background: var(--surface);
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.06);
+    }
+
+    /* —— 히어로 —— */
+    .hero {
+      position: relative;
+      min-height: 92dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero__img-wrap {
+      flex: 1;
+      min-height: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__img {
+      width: 100%;
+      height: 100%;
+      min-height: 70dvh;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    .hero__fade {
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 45%;
+      background: linear-gradient(to top, var(--surface) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero__content {
+      position: relative;
+      text-align: center;
+      padding: 0 24px 28px;
+      margin-top: -48px;
+    }
+
+    .hero__names {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: clamp(22px, 5.5vw, 28px);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    .hero__names .heart {
+      margin: 0 0.35em;
+      font-size: 0.85em;
+      color: var(--accent);
+    }
+
+    .hero__when {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+
+    .hero__where {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .scroll-hint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 0 20px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .scroll-hint::after {
+      content: "";
+      width: 1px;
+      height: 28px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      opacity: 0.6;
+    }
+
+    /* —— 공통 섹션 —— */
+    section {
+      padding: 48px 24px 56px;
+      border-top: 1px solid var(--line);
+    }
+
+    section:nth-of-type(even) {
+      background: var(--bg);
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    .prose {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .prose p + p {
+      margin-top: 1em;
+    }
+
+    /* 소개 */
+    .couple-grid {
+      display: grid;
+      gap: 32px;
+      margin-top: 8px;
+    }
+
+    .couple-card {
+      text-align: center;
+    }
+
+    .couple-card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+      letter-spacing: 0.12em;
+    }
+
+    .couple-card .name {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .couple-card .parents {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .couple-card .birth {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    /* 달력 */
+    .wedding-cal {
+      margin: 0 auto;
+      max-width: 340px;
+    }
+
+    .wedding-cal__caption {
+      text-align: center;
+      font-size: 15px;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .wedding-cal__month {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      letter-spacing: 0.06em;
+    }
+
+    .wedding-cal table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 13px;
+    }
+
+    .wedding-cal th {
+      font-weight: 500;
+      color: var(--muted);
+      padding: 10px 0 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wedding-cal th.sun {
+      color: var(--accent-light);
+    }
+
+    .wedding-cal th.sat {
+      color: var(--accent);
+    }
+
+    .wedding-cal td {
+      text-align: center;
+      vertical-align: middle;
+      padding: 10px 0;
+      color: var(--text);
+    }
+
+    .wedding-cal td.empty {
+      border: none;
+    }
+
+    .wedding-cal td.sun:not(.empty) {
+      color: var(--accent-light);
+    }
+
+    .wedding-cal td.sat:not(.empty) {
+      color: var(--accent);
+    }
+
+    .wedding-cal td .day {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.1em;
+      min-height: 2.1em;
+      border-radius: 50%;
+    }
+
+    .wedding-cal td.is-wedding .day {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .wedding-cal td.is-wedding.sun .day,
+    .wedding-cal td.is-wedding.sat .day {
+      color: #fff;
+    }
+
+    .wedding-cal__note {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    /* 갤러리 — 풀폭 캐러셀 */
+    .gallery-carousel {
+      position: relative;
+      margin: 20px -24px 0;
+    }
+
+    .gallery-carousel__viewport {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      outline: none;
+    }
+
+    .gallery-carousel__viewport::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-carousel__slide {
+      scroll-snap-align: start;
+      width: 100%;
+      height: clamp(300px, 65vh, 520px);
+      margin: 0;
+      background: var(--line);
+      overflow: hidden;
+    }
+
+    .gallery-carousel__slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .gallery-carousel__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 4;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .gallery-carousel__arrow:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+
+    .gallery-carousel__arrow--prev {
+      left: 10px;
+    }
+
+    .gallery-carousel__arrow--next {
+      right: 10px;
+    }
+
+    .gallery-carousel__dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 14px;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px 20px;
+      margin: 0;
+      pointer-events: none;
+    }
+
+    .gallery-carousel__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.55);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .gallery-carousel__dot[aria-current="true"] {
+      background: #000;
+      transform: scale(1.2);
+    }
+
+    /* 지도 이미지 */
+    .map-img-wrap {
+      margin-top: 16px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .map-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* 오시는 길 */
+    .venue-box {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .venue-box strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .map-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .map-btns a {
+      flex: 1;
+      min-width: calc(33% - 8px);
+      text-align: center;
+      padding: 10px 8px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .transport {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .transport h4 {
+      font-size: 12px;
+      color: var(--text);
+      margin: 18px 0 8px;
+    }
+
+    .transport-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 5px;
+      align-items: baseline;
+    }
+
+    .transport-row .stop {
+      min-width: 80px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .transport-row .dir {
+      font-size: 11px;
+      color: var(--accent);
+      background: rgba(0,71,171,0.07);
+      border-radius: 4px;
+      padding: 1px 5px;
+      white-space: nowrap;
+    }
+
+    .transport-row .route {
+      color: var(--muted);
+    }
+
+    /* 계좌 */
+    .account-group {
+      margin-top: 28px;
+    }
+
+    .account-group:first-of-type {
+      margin-top: 20px;
+    }
+
+    .account-group__title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .account-group .account-list {
+      margin-top: 0;
+    }
+
+    .account-list {
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .account-list li {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .account-list .bank {
+      font-size: 12px;
+      color: var(--muted);
+      width: 100%;
+    }
+
+    .copy-pill {
+      font-size: 11px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      cursor: pointer;
+    }
+
+    /* 엔딩 — 텍스트 / 사진 영역 분리 */
+    section#ending {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0;
+      padding-bottom: 0;
+      border-top: 1px solid var(--line);
+      background: transparent;
+    }
+
+    section#ending .ending__text {
+      flex-shrink: 0;
+      width: 100%;
+      padding: 40px 24px calc(36px + env(safe-area-inset-bottom, 0px));
+      background: #c7cddb;
+      text-align: center;
+    }
+
+    section#ending .ending__text .section-label {
+      margin-top: 0;
+    }
+
+    section#ending .ending__photo {
+      flex-shrink: 0;
+      width: 100%;
+      background-color: #d8dce3;
+      line-height: 0;
+    }
+
+    section#ending .ending__photo img {
+      width: 100%;
+      max-width: 697px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="hero" id="main">
+      <div class="hero__img-wrap">
+        <img class="hero__img" src="./images/hero.png" alt="신랑 신부 웨딩 사진" width="960" height="1280" />
+        <div class="hero__fade" aria-hidden="true"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__names">정진섭<span class="heart">♥</span>정찬혜</p>
+        <p class="hero__when">2026년 8월 8일 토요일 오전 11시</p>
+        <p class="hero__where">팔레드오페라·3층/트리아농홀</p>
+      </div>
+      <div class="scroll-hint">스크롤</div>
+    </header>
+
+    <section id="greeting">
+      <p class="section-label">Invitation</p>
+      <h2 class="section-title">저희 결혼합니다</h2>
+      <div class="prose">
+        <p>서로의 성장을 지켜보며<br />5년 6개월을 함께 걸어온 두 사람이 </p>
+        <p>이제 연인의 시간을 넘어 부부의 연을 맺으려 합니다.<br />소중한 분들과 이 기쁜 순간을 함께하고 싶습니다.</p>
+      </div>
+    </section>
+
+    <section id="intro">
+      <p class="section-label">About us</p>
+      <h2 class="section-title">소개</h2>
+      <div class="couple-grid">
+        <article class="couple-card">
+          <h3>신랑</h3>
+          <p class="name">정진섭</p>
+          <p class="parents">정현득 · 나선희의 장남</p>
+        </article>
+        <article class="couple-card">
+          <h3>신부</h3>
+          <p class="name">정찬혜</p>
+          <p class="parents">정규동 · 이경숙 의 장녀</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="calendar">
+      <p class="section-label">Calendar</p>
+      <h2 class="section-title">예식 날짜</h2>
+      <div class="wedding-cal">
+        <p class="wedding-cal__caption">팔월의 여덟 번째 날.</p>
+        <p class="wedding-cal__month">2026년 8월</p>
+        <table role="grid" aria-label="2026년 8월 달력">
+          <thead>
+            <tr>
+              <th class="sun" scope="col">일</th>
+              <th scope="col">월</th>
+              <th scope="col">화</th>
+              <th scope="col">수</th>
+              <th scope="col">목</th>
+              <th scope="col">금</th>
+              <th class="sat" scope="col">토</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="sat"><span class="day">1</span></td>
+            </tr>
+            <tr>
+              <td class="sun"><span class="day">2</span></td>
+              <td><span class="day">3</span></td>
+              <td><span class="day">4</span></td>
+              <td><span class="day">5</span></td>
+              <td><span class="day">6</span></td>
+              <td><span class="day">7</span></td>
+              <td class="sat is-wedding" aria-current="date"><span class="day">8</span></td>
+            </tr>
+            <tr>
+              <td class="sun"><span class="day">9</span></td>
+              <td><span class="day">10</span></td>
+              <td><span class="day">11</span></td>
+              <td><span class="day">12</span></td>
+              <td><span class="day">13</span></td>
+              <td><span class="day">14</span></td>
+              <td class="sat"><span class="day">15</span></td>
+            </tr>
+            <tr>
+              <td class="sun"><span class="day">16</span></td>
+              <td><span class="day">17</span></td>
+              <td><span class="day">18</span></td>
+              <td><span class="day">19</span></td>
+              <td><span class="day">20</span></td>
+              <td><span class="day">21</span></td>
+              <td class="sat"><span class="day">22</span></td>
+            </tr>
+            <tr>
+              <td class="sun"><span class="day">23</span></td>
+              <td><span class="day">24</span></td>
+              <td><span class="day">25</span></td>
+              <td><span class="day">26</span></td>
+              <td><span class="day">27</span></td>
+              <td><span class="day">28</span></td>
+              <td class="sat"><span class="day">29</span></td>
+            </tr>
+            <tr>
+              <td class="sun"><span class="day">30</span></td>
+              <td><span class="day">31</span></td>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="empty" aria-hidden="true"></td>
+              <td class="empty" aria-hidden="true"></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="wedding-cal__note">8일 토요일 · 예식일</p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <p class="section-label">Gallery</p>
+      <h2 class="section-title">갤러리</h2>
+      <div class="gallery-carousel" id="galleryCarousel">
+        <div
+          class="gallery-carousel__viewport"
+          id="galleryViewport"
+          tabindex="0"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="웨딩 갤러리"
+        >
+          <figure class="gallery-carousel__slide">
+            <img src="./images/gallery/01.png" alt="웨딩 스냅 1" width="600" height="800" loading="eager" decoding="async" />
+          </figure>
+          <figure class="gallery-carousel__slide">
+            <img src="./images/gallery/02.png" alt="웨딩 스냅 2" width="600" height="800" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="gallery-carousel__slide">
+            <img src="./images/gallery/03.png" alt="웨딩 스냅 3" width="600" height="800" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="gallery-carousel__slide">
+            <img src="./images/gallery/04.png" alt="웨딩 스냅 4" width="600" height="800" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="gallery-carousel__slide">
+            <img src="./images/gallery/05.png" alt="웨딩 스냅 5" width="600" height="800" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="gallery-carousel__slide">
+            <img src="./images/gallery/06.png" alt="웨딩 스냅 6" width="600" height="800" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="gallery-carousel__slide">
+            <img src="./images/gallery/07.png" alt="웨딩 스냅 7" width="600" height="800" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="gallery-carousel__slide">
+            <img src="./images/gallery/08.png" alt="웨딩 스냅 8" width="600" height="800" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="gallery-carousel__slide">
+            <img src="./images/gallery/09.png" alt="웨딩 스냅 9" width="600" height="800" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+        <button type="button" class="gallery-carousel__arrow gallery-carousel__arrow--prev" id="galleryPrev" aria-label="이전 사진">
+          ‹
+        </button>
+        <button type="button" class="gallery-carousel__arrow gallery-carousel__arrow--next" id="galleryNext" aria-label="다음 사진">
+          ›
+        </button>
+        <div class="gallery-carousel__dots" id="galleryDots" role="tablist" aria-label="갤러리 위치"></div>
+      </div>
+    </section>
+
+    <section id="location">
+      <p class="section-label">Location</p>
+      <h2 class="section-title">오시는 길</h2>
+      <div class="venue-box">
+        <strong>팔레드오페라</strong>
+        <p>대전광역시 서구 탄방동 587</p>
+        <div class="map-img-wrap">
+          <img src="./images/map.png" alt="팔레드오페라 약도" />
+        </div>
+        <div class="map-btns">
+          <a
+            href="tmap://route?goalx=127.383466&amp;goaly=36.348106&amp;goalname=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%84%9C%EA%B5%AC%20%EB%91%94%EC%82%B0%EB%82%A8%EB%A1%9C%2050"
+            >티맵</a>
+          <a href="kakaonavi://navigate?name=%ED%8C%94%EB%A0%88%EB%93%9C%EC%98%A4%ED%8E%98%EB%9D%BC&amp;x=12738347&amp;y=3634811">카카오내비</a>
+          <a
+            href="https://map.naver.com/p/search/%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%84%9C%EA%B5%AC%20%EB%91%94%EC%82%B0%EB%82%A8%EB%A1%9C%2050"
+            target="_blank"
+            rel="noopener noreferrer"
+            >네이버지도</a>
+        </div>
+      </div>
+      <div class="transport">
+        <h4>지하철</h4>
+        <p>1호선 탄방역 2번·3번 출구<br />1호선 시청역 1번 출구</p>
+        <h4>버스</h4>
+        <p>
+          <span class="transport-row"><span class="stop">복합고속터미널</span><span class="dir">승차</span><span class="route">간선 105, 106</span></span>
+          <span class="transport-row"><span class="stop">정부청사터미널</span><span class="dir">승차</span><span class="route">간선 618</span></span>
+          <span class="transport-row"><span class="stop">세종특별자치시</span><span class="dir">승차</span><span class="route">광역 M1</span></span>
+          <span class="transport-row"><span class="stop">둔산초등학교</span><span class="dir">하차</span><span class="route">간선 618</span></span>
+          <span class="transport-row"><span class="stop">대전고용센터</span><span class="dir">하차</span><span class="route">간선 105, 706</span></span>
+          <span class="transport-row"><span class="stop">대전광역시청</span><span class="dir">하차</span><span class="route">간선 104, 106, 213, 617, 703, 707</span></span>
+        </p>
+        <h4>자가용</h4>
+        <p>유성 IC · 북대전 IC · 대전 IC → 시청방면<br />대전시청 남문 앞</p>
+      </div>
+    </section>
+
+
+    <section id="accounts">
+      <p class="section-label">Account</p>
+      <h2 class="section-title">마음 전하실 곳</h2>
+      <div class="prose">
+        <p>멀리서도 축하의 마음을 전하고 싶으신 분들을 위해<br />계좌번호를 안내드립니다.</p>
+      </div>
+
+      <div class="account-group">
+        <h3 class="account-group__title">신랑측</h3>
+        <ul class="account-list">
+          <li>
+            <div>
+              <strong>신랑</strong>
+              <span class="bank">000-000-000000 · 000은행 · 정진섭</span>
+            </div>
+            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+          </li>
+          <li>
+            <div>
+              <strong>신랑 아버지</strong>
+              <span class="bank">000-000-000000 · 000은행 · 정현득</span>
+            </div>
+            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+          </li>
+          <li>
+            <div>
+              <strong>신랑 어머니</strong>
+              <span class="bank">000-000-000000 · 000은행 · 나선희</span>
+            </div>
+            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="account-group">
+        <h3 class="account-group__title">신부측</h3>
+        <ul class="account-list">
+          <li>
+            <div>
+              <strong>신부</strong>
+              <span class="bank">000-000-000000 · 000은행 · 정찬혜</span>
+            </div>
+            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+          </li>
+          <li>
+            <div>
+              <strong>신부 아버지</strong>
+              <span class="bank">000-000-000000 · 000은행 · 정규동</span>
+            </div>
+            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+          </li>
+          <li>
+            <div>
+              <strong>신부 어머니</strong>
+              <span class="bank">000-000-000000 · 000은행 · 이경숙</span>
+            </div>
+            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ending">
+      <div class="ending__photo">
+        <img
+          src="./images/ending-bg.png"
+          alt=""
+          width="697"
+          height="1024"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="ending__text">
+        <p class="section-label">The end</p>
+        <h2 class="section-title">감사합니다</h2>
+        <div class="prose">
+          <p>소중한 날 함께해 주셔서<br />진심으로 감사드립니다.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    (function () {
+      var carousel = document.getElementById("galleryCarousel");
+      var viewport = document.getElementById("galleryViewport");
+      var prevBtn = document.getElementById("galleryPrev");
+      var nextBtn = document.getElementById("galleryNext");
+      var dotsRoot = document.getElementById("galleryDots");
+      if (!carousel || !viewport || !prevBtn || !nextBtn || !dotsRoot) return;
+
+      var slides = viewport.querySelectorAll(".gallery-carousel__slide");
+      var n = slides.length;
+      var i;
+      for (i = 0; i < n; i++) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "gallery-carousel__dot";
+        dot.setAttribute("role", "tab");
+        dot.setAttribute("aria-label", "사진 " + (i + 1));
+        dot.dataset.index = String(i);
+        dotsRoot.appendChild(dot);
+      }
+      var dots = dotsRoot.querySelectorAll(".gallery-carousel__dot");
+
+      function slideWidth() {
+        return viewport.clientWidth;
+      }
+
+      function currentIndex() {
+        var w = slideWidth();
+        if (w <= 0) return 0;
+        return Math.round(viewport.scrollLeft / w);
+      }
+
+      function goTo(index) {
+        var w = slideWidth();
+        var max = n - 1;
+        var idx = Math.max(0, Math.min(max, index));
+        viewport.scrollTo({ left: idx * w, behavior: "smooth" });
+      }
+
+      function syncUi() {
+        var idx = currentIndex();
+        prevBtn.disabled = idx <= 0;
+        nextBtn.disabled = idx >= n - 1;
+        dots.forEach(function (d, j) {
+          d.setAttribute("aria-current", j === idx ? "true" : "false");
+        });
+      }
+
+      prevBtn.addEventListener("click", function () {
+        goTo(currentIndex() - 1);
+      });
+      nextBtn.addEventListener("click", function () {
+        goTo(currentIndex() + 1);
+      });
+      dotsRoot.addEventListener("click", function (e) {
+        var t = e.target.closest(".gallery-carousel__dot");
+        if (!t || t.dataset.index == null) return;
+        goTo(parseInt(t.dataset.index, 10));
+      });
+
+      var scrollEndTimer;
+      viewport.addEventListener("scroll", function () {
+        clearTimeout(scrollEndTimer);
+        scrollEndTimer = setTimeout(syncUi, 50);
+      });
+      viewport.addEventListener("scrollend", syncUi);
+
+      viewport.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          goTo(currentIndex() - 1);
+        } else if (e.key === "ArrowRight") {
+          e.preventDefault();
+          goTo(currentIndex() + 1);
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        var w = slideWidth();
+        if (w <= 0) return;
+        var idx = Math.min(n - 1, Math.max(0, Math.round(viewport.scrollLeft / w)));
+        viewport.scrollLeft = idx * w;
+        syncUi();
+      });
+      syncUi();
+    })();
+
+    (function () {
+      var root = document.getElementById("accounts");
+      if (!root) return;
+      root.addEventListener("click", function (e) {
+        var btn = e.target.closest(".copy-pill");
+        if (!btn || !btn.dataset.copy) return;
+        var text = btn.dataset.copy.replace(/\D/g, "");
+        if (!text) return;
+        function done(ok) {
+          var prev = btn.textContent;
+          btn.textContent = ok ? "복사됨" : "실패";
+          setTimeout(function () {
+            btn.textContent = prev;
+          }, 1600);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(
+            function () {
+              done(true);
+            },
+            function () {
+              done(false);
+            }
+          );
+        } else {
+          done(false);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
