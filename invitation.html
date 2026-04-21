@@ -605,6 +605,65 @@
       margin: 0 auto;
     }
 
+    /* —— 히어로 텍스트 등장 애니메이션 —— */
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero__names {
+      opacity: 0;
+      animation: heroFadeUp 0.9s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .hero__when {
+      opacity: 0;
+      animation: heroFadeUp 0.9s ease forwards;
+      animation-delay: 0.7s;
+    }
+
+    .hero__where {
+      opacity: 0;
+      animation: heroFadeUp 0.9s ease forwards;
+      animation-delay: 1.0s;
+    }
+
+    .scroll-hint {
+      opacity: 0;
+      animation: heroFadeUp 0.9s ease forwards;
+      animation-delay: 1.4s;
+    }
+
+    /* —— 섹션 스크롤 페이드인 —— */
+    @keyframes sectionFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(32px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
   </style>
 </head>
 <body>
@@ -626,7 +685,7 @@
       <p class="section-label">Invitation</p>
       <h2 class="section-title">저희 결혼합니다</h2>
       <div class="prose">
-        <p>서로의 성장을 지켜보며<br />5년 6개월을 함께 걸어온 두 사람이 </p>
+        <p>서로의 성장을 지켜보며<br />5년 8개월을 함께 걸어온 두 사람이 </p>
         <p>이제 연인의 시간을 넘어 부부의 연을 맺으려 합니다.<br />소중한 분들과 이 기쁜 순간을 함께하고 싶습니다.</p>
       </div>
     </section>
@@ -829,23 +888,23 @@
           <li>
             <div>
               <strong>신랑</strong>
-              <span class="bank">000-000-000000 · 000은행 · 정진섭</span>
+              <span class="bank">010-6585-4581 · 기업은행 · 정진섭</span>
             </div>
-            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+            <button type="button" class="copy-pill" data-copy="01065854581">복사</button>
           </li>
           <li>
             <div>
               <strong>신랑 아버지</strong>
-              <span class="bank">000-000-000000 · 000은행 · 정현득</span>
+              <span class="bank">3333-04-2406728 · 카카오뱅크 · 정현득</span>
             </div>
-            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+            <button type="button" class="copy-pill" data-copy="3333042406728">복사</button>
           </li>
           <li>
             <div>
               <strong>신랑 어머니</strong>
-              <span class="bank">000-000-000000 · 000은행 · 나선희</span>
+              <span class="bank">010-2667-4581 · 기업은행 · 나선희</span>
             </div>
-            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+            <button type="button" class="copy-pill" data-copy="01026674581">복사</button>
           </li>
         </ul>
       </div>
@@ -856,23 +915,23 @@
           <li>
             <div>
               <strong>신부</strong>
-              <span class="bank">000-000-000000 · 000은행 · 정찬혜</span>
+              <span class="bank">1000-6960-5173 · 토스뱅크 · 정찬혜</span>
             </div>
-            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+            <button type="button" class="copy-pill" data-copy="100069605173">복사</button>
           </li>
           <li>
             <div>
               <strong>신부 아버지</strong>
-              <span class="bank">000-000-000000 · 000은행 · 정규동</span>
+              <span class="bank">703645-02-199169 · 우체국 · 정규동</span>
             </div>
-            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+            <button type="button" class="copy-pill" data-copy="70364502199169">복사</button>
           </li>
           <li>
             <div>
               <strong>신부 어머니</strong>
-              <span class="bank">000-000-000000 · 000은행 · 이경숙</span>
+              <span class="bank">015-08-428467 · IM뱅크 · 이경숙</span>
             </div>
-            <button type="button" class="copy-pill" data-copy="000000000000">복사</button>
+            <button type="button" class="copy-pill" data-copy="01508428467">복사</button>
           </li>
         </ul>
       </div>
@@ -986,6 +1045,24 @@
         syncUi();
       });
       syncUi();
+    })();
+
+    /* 섹션 스크롤 페이드인 */
+    (function () {
+      var sections = document.querySelectorAll("section");
+      if (!("IntersectionObserver" in window)) {
+        sections.forEach(function (s) { s.classList.add("is-visible"); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      sections.forEach(function (s) { observer.observe(s); });
     })();
 
     (function () {
