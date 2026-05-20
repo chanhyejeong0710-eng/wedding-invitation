@@ -1017,9 +1017,9 @@
     </section>
 
     <section id="sungsimdang">
-      <p class="section-label">Daejeon Special</p>
       <button type="button" class="ssd-toggle" id="ssdToggle" aria-expanded="false" aria-controls="ssdDetail">
-        성심당 가는 길 <span class="ssd-toggle__arrow">▾</span>
+        <span class="section-label" style="margin:0;">Daejeon Special</span>
+        <span class="ssd-toggle__arrow">▾</span>
       </button>
       <div id="ssdDetail" class="ssd-detail" hidden>
         <div class="prose" style="padding: 20px 0 4px;">
@@ -1230,12 +1230,10 @@
         if (expanded) {
           toggle.setAttribute("aria-expanded", "false");
           toggle.querySelector(".ssd-toggle__arrow").textContent = "▾";
-          toggle.childNodes[0].textContent = "성심당 가는 길 ";
           detail.hidden = true;
         } else {
           toggle.setAttribute("aria-expanded", "true");
           toggle.querySelector(".ssd-toggle__arrow").textContent = "▴";
-          toggle.childNodes[0].textContent = "성심당 가는 길 ";
           detail.hidden = false;
         }
       });
