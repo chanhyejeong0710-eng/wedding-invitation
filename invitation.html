@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="정진섭 ♥ 정찬혜 결혼합니다" />
   <meta property="og:description" content="2026년 8월 8일 토요일 오전 11시 · 팔레드오페라 트리아농홀" />
-  <meta property="og:image" content="./images/hero.png" />
+  <meta property="og:image" content="./images/hero.jpg" />
   <meta property="og:locale" content="ko_KR" />
   <style>
     :root {
@@ -96,8 +96,16 @@
     .hero__fade {
       position: absolute;
       inset: auto 0 0 0;
-      height: 45%;
-      background: linear-gradient(to top, var(--surface) 0%, transparent 100%);
+      height: 60%;
+      background: linear-gradient(
+        to top,
+        rgba(255,255,255,1)   0%,
+        rgba(255,255,255,0.9) 15%,
+        rgba(255,255,255,0.7) 35%,
+        rgba(255,255,255,0.4) 55%,
+        rgba(255,255,255,0.15) 75%,
+        rgba(255,255,255,0)   100%
+      );
       pointer-events: none;
     }
 
@@ -347,7 +355,7 @@
     .gallery-carousel__slide {
       scroll-snap-align: start;
       width: 100%;
-      height: clamp(300px, 65vh, 520px);
+      height: clamp(420px, 82vh, 680px);
       margin: 0;
       background: var(--line);
       overflow: hidden;
@@ -577,9 +585,7 @@
     section#ending .ending__photo {
       position: relative;
       width: 100%;
-      background-color: #d8dce3;
       line-height: 0;
-      padding-top: 50px;
     }
 
     section#ending .ending__photo img {
@@ -592,11 +598,12 @@
 
     section#ending .ending__text {
       position: absolute;
-      top: 40px;
+      top: 0;
       left: 0;
       right: 0;
       text-align: center;
-      padding: 0 24px;
+      padding: 40px 24px 60px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.6) 60%, transparent 100%);
     }
 
     section#ending .ending__text .section-label {
@@ -719,7 +726,7 @@
   <div class="app">
     <header class="hero" id="main">
       <div class="hero__img-wrap">
-        <img class="hero__img" src="./images/hero.png" alt="신랑 신부 웨딩 사진" width="960" height="1280" />
+        <img class="hero__img" src="./images/hero.jpg" alt="신랑 신부 웨딩 사진" width="960" height="1280" />
         <div class="hero__fade" aria-hidden="true"></div>
       </div>
       <div class="hero__content">
@@ -848,31 +855,31 @@
           aria-label="웨딩 갤러리"
         >
           <figure class="gallery-carousel__slide">
-            <img src="./images/gallery/01.png" alt="웨딩 스냅 1" width="600" height="800" loading="eager" decoding="async" />
+            <img src="./images/gallery/01.jpg" alt="웨딩 스냅 1" width="600" height="800" loading="eager" decoding="async" />
           </figure>
           <figure class="gallery-carousel__slide">
-            <img src="./images/gallery/02.png" alt="웨딩 스냅 2" width="600" height="800" loading="lazy" decoding="async" />
+            <img src="./images/gallery/02.jpg" alt="웨딩 스냅 2" width="600" height="800" loading="lazy" decoding="async" />
           </figure>
           <figure class="gallery-carousel__slide">
-            <img src="./images/gallery/03.png" alt="웨딩 스냅 3" width="600" height="800" loading="lazy" decoding="async" />
+            <img src="./images/gallery/03.jpg" alt="웨딩 스냅 3" width="600" height="800" loading="lazy" decoding="async" />
           </figure>
           <figure class="gallery-carousel__slide">
-            <img src="./images/gallery/04.png" alt="웨딩 스냅 4" width="600" height="800" loading="lazy" decoding="async" />
+            <img src="./images/gallery/04.jpg" alt="웨딩 스냅 4" width="600" height="800" loading="lazy" decoding="async" />
           </figure>
           <figure class="gallery-carousel__slide">
-            <img src="./images/gallery/05.png" alt="웨딩 스냅 5" width="600" height="800" loading="lazy" decoding="async" />
+            <img src="./images/gallery/05.jpg" alt="웨딩 스냅 5" width="600" height="800" loading="lazy" decoding="async" />
           </figure>
           <figure class="gallery-carousel__slide">
-            <img src="./images/gallery/06.png" alt="웨딩 스냅 6" width="600" height="800" loading="lazy" decoding="async" />
+            <img src="./images/gallery/06.jpg" alt="웨딩 스냅 6" width="600" height="800" loading="lazy" decoding="async" />
           </figure>
           <figure class="gallery-carousel__slide">
-            <img src="./images/gallery/07.png" alt="웨딩 스냅 7" width="600" height="800" loading="lazy" decoding="async" />
+            <img src="./images/gallery/07.jpg" alt="웨딩 스냅 7" width="600" height="800" loading="lazy" decoding="async" />
           </figure>
           <figure class="gallery-carousel__slide">
-            <img src="./images/gallery/08.png" alt="웨딩 스냅 8" width="600" height="800" loading="lazy" decoding="async" />
+            <img src="./images/gallery/08.jpg" alt="웨딩 스냅 8" width="600" height="800" loading="lazy" decoding="async" />
           </figure>
           <figure class="gallery-carousel__slide">
-            <img src="./images/gallery/09.png" alt="웨딩 스냅 9" width="600" height="800" loading="lazy" decoding="async" />
+            <img src="./images/gallery/09.jpg" alt="웨딩 스냅 9" width="600" height="800" loading="lazy" decoding="async" />
           </figure>
         </div>
         <button type="button" class="gallery-carousel__arrow gallery-carousel__arrow--prev" id="galleryPrev" aria-label="이전 사진">
@@ -999,7 +1006,7 @@
           </div>
         </div>
         <img
-          src="./images/ending-bg.png"
+          src="./images/ending-bg.jpg"
           alt=""
           width="697"
           height="1024"
@@ -1011,14 +1018,13 @@
 
     <section id="sungsimdang">
       <p class="section-label">Daejeon Special</p>
-      <h2 class="section-title">성심당 가는 길</h2>
-      <div class="prose">
-        <p>대전에 오셨다면 꼭 들러보세요.<br />식이 끝난 후 성심당 본점으로 향해보시는 건 어떨까요?</p>
-      </div>
       <button type="button" class="ssd-toggle" id="ssdToggle" aria-expanded="false" aria-controls="ssdDetail">
-        상세 안내 보기 <span class="ssd-toggle__arrow">▾</span>
+        성심당 가는 길 <span class="ssd-toggle__arrow">▾</span>
       </button>
       <div id="ssdDetail" class="ssd-detail" hidden>
+        <div class="prose" style="padding: 20px 0 4px;">
+          <p>대전에 오셨다면 꼭 들러보세요.<br />식이 끝난 후 성심당 본점으로 향해보시는 건 어떨까요?</p>
+        </div>
 
         <div class="venue-box" style="margin-top:0;">
           <strong>본점</strong>
@@ -1224,12 +1230,12 @@
         if (expanded) {
           toggle.setAttribute("aria-expanded", "false");
           toggle.querySelector(".ssd-toggle__arrow").textContent = "▾";
-          toggle.childNodes[0].textContent = "상세 안내 보기 ";
+          toggle.childNodes[0].textContent = "성심당 가는 길 ";
           detail.hidden = true;
         } else {
           toggle.setAttribute("aria-expanded", "true");
           toggle.querySelector(".ssd-toggle__arrow").textContent = "▴";
-          toggle.childNodes[0].textContent = "상세 안내 닫기 ";
+          toggle.childNodes[0].textContent = "성심당 가는 길 ";
           detail.hidden = false;
         }
       });
